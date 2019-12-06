@@ -1,0 +1,533 @@
+a{
+	color: #efefef;
+}
+
+a:hover{
+  color: #fff;
+	text-decoration: none;
+}
+
+.nav-tabs .nav-link {
+	border: none;
+	padding: .5rem;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+	border-color: transparent;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+	color: #fff;
+	background-color: rgba(255,255,255,0.35);
+}
+
+.btn-link {
+	color: #f00;
+}
+
+.btn-link:hover {
+	color: #b30000;
+}
+
+.tab-pane {
+	flex: 1 1 0;
+}
+
+.tab-content > .active {
+	display: flex;
+}
+
+.cp-list {
+	flex: 1 1 0;
+}
+
+
+#clipboard_wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+
+#toggle-nav {
+	margin-left: 25px;
+  display: none;
+}
+
+#header {
+	flex: 0 0 auto;
+	padding: 0px 20px;
+	background: #003348;
+	color: #efefef;
+}
+
+#header h1 {
+	font-family: "titillium999w", sans-serif;
+	display: inline-block;
+	font-size: 2rem;
+	vertical-align: middle;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#logo {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+#logo img {
+	height: 60px;
+}
+
+#main {
+  flex: 1 1 0;
+  padding: 0px;
+  display: flex;
+}
+
+
+#nav {
+	flex: 0 0 285px;
+	background: rgba(0,52,71,0.85);
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.5s ease 0s;
+	left: 0px;
+}
+
+#nav.hide {
+	left: -300px;
+  transition: all 0.5s ease 0s;
+}
+
+#nav-content {
+	flex: 1 1 0;
+	margin-top: 10px;
+}
+
+
+#article {
+	display: flex;
+	flex: 1 1 0;
+}
+
+
+
+#cp-fileupload-input{
+  display: none;
+}
+
+
+.cp-action button {
+	flex: 1 1 0;
+	margin: 0px 5px;
+}
+
+.cp-content {
+	flex: 1 1 0;
+	display: flex;
+	margin: 10px;
+}
+
+#editor {
+	flex: 1 1 0;
+	margin: 0;
+}
+
+.cp-files-upload {
+	max-height: 140px;
+	overflow: auto;
+	margin-bottom: 10px;
+}
+
+.cp-text, .cp-files {
+	flex: 1 1 0;
+	overflow: auto;
+	margin-bottom: 10px;
+}
+
+.cp-text .name, .cp-files .name, .cp-files-upload .name {
+	overflow: hidden;
+	width: 150px;
+  white-space: nowrap;
+}
+
+.cp-files-upload .progress {
+	flex: 1 1 0;
+	margin-left: 15px;
+}
+
+.cp-text .list-group-item, .cp-files .list-group-item, .cp-files-upload .list-group-item {
+	padding: 8px 10px 8px 30px;
+}
+
+.cp-del {
+	position: absolute;
+	left: 5px;
+	height: 30px;
+	padding: 0;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+
+
+.list-group-item-light {
+	background: transparent;
+	border: none;
+	color: #efefef;
+}
+
+.list-group-item-light.list-group-item-action:focus, .list-group-item-light.list-group-item-action:hover {
+	background: transparent;
+  color: #fff;
+  transition: all 0.5s ease 0s;
+}
+
+.list-group-item-light.list-group-item-action:focus .cp-del, .list-group-item-light.list-group-item-action:hover .cp-del {
+	opacity: 1;
+}
+
+.list-group-item-light.list-group-item-action.active {
+	color: #fff;
+	background-color: rgba(255,255,255,0.55);
+}
+
+
+@media (max-width: 500px){
+  #nav {
+  	position: absolute;
+  	z-index: 100;
+  	bottom: 0px;
+  	top: 73px;
+  	background: rgba(0,52,71,1);
+  }
+
+  #toggle-nav {
+  	display: inline-block;
+  }
+
+  .cp-del {
+    opacity: 1;
+  }
+}
+/*
+
+
+
+
+hr {
+  border: none;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25px;
+  flex: 0 0 25px;
+  background: #003245;
+  width: 100%;
+  margin: 0px;
+}
+
+#header {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 135px;
+	flex: 0 0 auto;
+	padding: 0px 20px;
+	background: #fff;
+}
+
+#header h1 {
+  font-family: "titillium999w", sans-serif;
+  margin: 20px 0px 15px;
+  color: #5e8abc;
+  font-size: 36px;
+}
+
+#logo {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+#logo img {
+	height: 65px;
+}
+
+#main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main hr {
+	border: none;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 4px;
+	flex: 0 0 4px;
+	margin: 0px;
+	height: 100%;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+}
+
+#text {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 0 0 75%;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	margin: 5px;
+	max-width: 75%;
+}
+
+
+
+#addData {
+	display: block;
+	background: #5e8abc;
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+
+#addText {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	position: absolute;
+	right: 0px;
+	background: #fff;
+	top: 0px;
+}
+
+#addText > a {
+	padding: 0px 5px;
+	line-height: 34px;
+}
+
+#text .nav {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 33px;
+	flex: 0 0 auto;
+	width: 100%;
+	overflow: auto;
+	max-width: 100%;
+	position: relative;
+	padding-right: 33px;
+	margin-bottom: 5px;
+}
+
+#text .nav ul {
+	list-style: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+	overflow: auto;
+}
+
+#text .nav ul > li {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	overflow: hidden;
+	background: #d7d7d7;
+	border-top: 1px solid #999;
+	border-right: 1px solid #777;
+	border-left: 1px solid #bbb;
+	position: relative;
+	min-width: 55px;
+	border-bottom: 1px solid #777;
+}
+
+#text .nav ul > li .fa-close {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: #ccc;
+}
+
+#text .nav ul > li a {
+	padding: 0px 5px;
+	line-height: 32px;
+	display: block;
+	color: #333;
+	white-space: nowrap;
+}
+
+#text .nav ul > li.active {
+	background: #5e8abc;
+}
+
+#text .nav ul > li.active a {
+	color: #fff;
+}
+
+#text .content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+	position: relative;
+}
+
+#text .content .ph {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#data {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	margin: 5px;
+	overflow: auto;
+}
+
+
+#data .file {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+  padding: 0px;
+  line-height: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#data .file .name{
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 0px;
+	        flex: 1 1 0;
+}
+
+#data .file .fa-download, #data .file .fa-trash {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	margin-left: 5px;
+	padding: 0px 10px;
+	top: 3px;
+	position: relative;
+	cursor: pointer;
+}
+
+
+#main .info {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 17px;
+  padding: 5px 10px;
+}
+
+
+
+
+#copyText {
+	display: none;
+	text-align: center;
+	background: #5e8abc;
+	color: #fff;
+	line-height: 32px;
+	margin: 0px 10px 5px;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 776px) {
+  hr{
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25px;
+            flex: 0 0 12px;
+  }
+
+	#header h1 {
+  	font-size: 20px;
+  	margin: 10px 0px 5px;
+  }
+
+  #logo img {
+  	height: 28px;
+  }
+  #main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+		overflow: auto;
+  }
+  #text {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 99%;
+    flex: 0 0 99%;
+    max-width: 99%;
+  }
+
+  #data{
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+
+	#data .info {
+	  margin-top: 10px;
+	}
+
+  #copyText {
+  	display: block;
+  }
+}
+
+*/
+
+@font-face {
+  font-family: 'titillium1w';
+  src: url('../font/TitilliumText22L1wt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'titillium250w';
+  src: url('../font/TitilliumText22L250wt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'titillium400w';
+  src: url('../font/TitilliumText22L400wt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'titillium600w';
+  src: url('../font/TitilliumText22L600wt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'titillium800w';
+  src: url('../font/TitilliumText22L800wt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'titillium999w';
+  src: url('../font/TitilliumText22L999wt.ttf') format('truetype');
+}
